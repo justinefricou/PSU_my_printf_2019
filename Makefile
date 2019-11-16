@@ -21,31 +21,6 @@ SRC	=	lib/my/my_printf.c 	\
 		lib/my/pf_p.c 	\
 		lib/my/tools.c
 
-#####################################################
-
-NAME_PROGR = progr
-
-SRC_PROGR = lib/my/my_printf.c 	\
-			lib/my/display_result.c 	\
-			lib/my/pf_char.c 	\
-			lib/my/pf_str.c 	\
-			lib/my/pf_int.c 	\
-			lib/my/pf_u.c 	\
-			lib/my/pf_n.c 	\
-			lib/my/pf_b.c 	\
-			lib/my/pf_o.c 	\
-			lib/my/pf_x_majx.c 	\
-			lib/my/pf_p.c 	\
-			lib/my/tools.c 	\
-			main.c
-
-OBJ_PROGR	=	$(SRC_PROGR:.c=.o)
-
-progr:	$(OBJ_PROGR)
-		gcc -o $(NAME_PROGR) $(OBJ_PROGR)
-
-#####################################################
-
 SRC_TESTS	=
 
 OBJ	=	$(SRC:.c=.o)
