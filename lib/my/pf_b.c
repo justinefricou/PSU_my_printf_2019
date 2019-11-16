@@ -24,11 +24,3 @@ void pf_b(int *printed_chars, va_list list)
             one_found = 1;
     }
 }
-
-long long x_to_the_power_of_n(int x, int n)
-{
-    long long result = 1;
-    for ( ; n > 0; n--)
-        result *= x;
-    return (result);
-}

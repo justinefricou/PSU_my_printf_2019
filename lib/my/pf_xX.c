@@ -10,25 +10,11 @@
 void pf_x(int *printed_chars, va_list list)
 {
     unsigned int nbr = 0;
-
-    nbr = va_arg(list, unsigned int);
-    display_number_base_16_min(printed_chars, nbr);
-}
-
-void pf_X(int *printed_chars, va_list list)
-{
-    unsigned int nbr = 0;
-
-    nbr = va_arg(list, unsigned int);
-    display_number_base_16_maj(printed_chars, nbr);
-}
-
-void display_number_base_16_min(int *printed_chars, unsigned int nbr)
-{
     int digit = 0;
     int significant_digit = 0;
     char *base = "0123456789abcdef";
 
+    nbr = va_arg(list, unsigned int);
     for (int exponent = 9; exponent >= 0; exponent--) {
         digit = get_digit_in_base(nbr, 16, exponent);
         nbr -= digit * x_to_the_power_of_n(16, exponent);
@@ -39,12 +25,14 @@ void display_number_base_16_min(int *printed_chars, unsigned int nbr)
     }
 }
 
-void display_number_base_16_maj(int *printed_chars, unsigned int nbr)
+void pf_X(int *printed_chars, va_list list)
 {
+    unsigned int nbr = 0;
     int digit = 0;
     int significant_digit = 0;
     char *base = "0123456789ABCDEF";
 
+    nbr = va_arg(list, unsigned int);
     for (int exponent = 9; exponent >= 0; exponent--) {
         digit = get_digit_in_base(nbr, 16, exponent);
         nbr -= digit * x_to_the_power_of_n(16, exponent);

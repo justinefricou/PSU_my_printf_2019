@@ -25,11 +25,7 @@ int my_strlen(const char *str);
 void my_put_char(int *printed_chars, char c);
 void my_put_absolute_value(int *printed_chars, int nbr);
 long long x_to_the_power_of_n(int x, int n);
-
-int get_digit_in_base(int nbr, int base, int exponent);
-void display_number_base_8(int *printed_chars, unsigned int nbr);
-void display_number_base_16_min(int *printed_chars, unsigned int nbr);
-void display_number_base_16_maj(int *printed_chars, unsigned int nbr);
+int get_digit_in_base(long long nbr, int base, int exponent);
 
 void pf_char(int *printed_chars, va_list list);
 void pf_str(int *printed_chars, va_list list);
@@ -40,5 +36,6 @@ void pf_b(int *printed_chars, va_list list);
 void pf_o(int *printed_chars, va_list list);
 void pf_x(int *printed_chars, va_list list);
 void pf_X(int *printed_chars, va_list list);
+void pf_p(int *printed_chars, va_list list);
 
 #endif

@@ -30,7 +30,15 @@ void my_put_absolute_value(int *printed_chars, int nbr)
     my_put_char(printed_chars, nbr % 10 + 48);
 }
 
-int get_digit_in_base(int nbr, int base, int exponent)
+long long x_to_the_power_of_n(int x, int n)
+{
+    long long result = 1;
+    for ( ; n > 0; n--)
+        result *= x;
+    return (result);
+}
+
+int get_digit_in_base(long long nbr, int base, int exponent)
 {
     int digit = base - 1;
 
