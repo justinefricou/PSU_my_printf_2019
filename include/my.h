@@ -25,7 +25,9 @@ int my_strlen(const char *str);
 void my_put_char(int *printed_chars, char c);
 void my_put_absolute_value(int *printed_chars, int nbr);
 long long x_to_the_power_of_n(int x, int n);
+
 int get_digit_in_base(int nbr, int base, int exponent);
+void display_number_base_8(int *printed_chars, unsigned int nbr);
 
 void pf_char(int *printed_chars, va_list list);
 void pf_str(int *printed_chars, va_list list);

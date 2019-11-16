@@ -1,21 +1,25 @@
 /*
 ** EPITECH PROJECT, 2019
-** pf_o.c
+** pf_x.c
 ** File description:
-** my_printf : pf_o
+** my_printf : pf_x
 */
 
 #include "../../include/my.h"
 
-void pf_o(int *printed_chars, va_list list)
+#include "../../include/my.h"
+
+void pf_x(int *printed_chars, va_list list)
 {
     unsigned int nbr = 0;
+    int digit = 0;
+    int significant_digit = 0;
 
     nbr = va_arg(list, unsigned int);
     display_number_base_8(printed_chars, nbr);
 }
 
-void display_number_base_8(int *printed_chars, unsigned int nbr)
+void display_number_base_16(int *printed_chars, unsigned int nbr)
 {
     int digit = 0;
     int significant_digit = 0;
