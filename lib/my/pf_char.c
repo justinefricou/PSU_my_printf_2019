@@ -7,12 +7,11 @@
 
 #include "../../include/my.h"
 
-int pf_char(int *printed_chars, va_list list)
+void pf_char(int *printed_chars, va_list list)
 {
     char character;
 
     character = va_arg(list, int);
     write(1, &character, 1);
     (*printed_chars)++;
-    return (0);
 }

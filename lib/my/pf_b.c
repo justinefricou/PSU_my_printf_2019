@@ -7,13 +7,13 @@
 
 #include "../../include/my.h"
 
-int pf_b(int *printed_chars, va_list list)
+void pf_b(int *printed_chars, va_list list)
 {
     long long nbr;
     int digit = 0;
     int one_found = 0;
 
-    nbr = va_arg(list, unsigned long long);
+    nbr = va_arg(list, long long);
     for (int exponent = 63; exponent >= 0; exponent--) {
         digit = ((nbr - x_to_the_power_of_n(2, exponent)) >= 0);
         if (digit != 0 || one_found) {
@@ -23,7 +23,6 @@ int pf_b(int *printed_chars, va_list list)
         if (digit == 1)
             one_found = 1;
     }
-    return (0);
 }
 
 long long x_to_the_power_of_n(int x, int n)

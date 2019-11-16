@@ -7,7 +7,7 @@
 
 #include "../../include/my.h"
 
-int pf_str(int *printed_chars, va_list list)
+void pf_str(int *printed_chars, va_list list)
 {
     char *str = NULL;
 
@@ -16,5 +16,4 @@ int pf_str(int *printed_chars, va_list list)
         write(1, &(str[i]), 1);
         (*printed_chars)++;
     }
-    return (0);
 }

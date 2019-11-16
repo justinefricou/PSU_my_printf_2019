@@ -15,11 +15,7 @@ int my_printf(const char *format, ...)
 
     va_start(list, format);
     specifiers = get_specifiers(format);
-    if (display_result(format, specifiers, list, &printed_chars) == 84) {
-        va_end(list);
-        free(specifiers);
-        return (84);
-    }
+    display_result(format, specifiers, list, &printed_chars);
     va_end(list);
     free(specifiers);
     return (printed_chars);
@@ -48,7 +44,7 @@ specifier *get_specifiers(const char *format)
 int detect_specifier(const char **format)
 {
     int nbr_of_percents = 0;
-    char *handled_specifiers = "csidunb";
+    char *handled_specifiers = "csidunbo";
 
     for ( ; **format != 0 && **format == '%'; (*format)++, nbr_of_percents++);
     for ( ; *handled_specifiers != 0; handled_specifiers++)

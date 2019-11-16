@@ -7,7 +7,7 @@
 
 #include "../../include/my.h"
 
-int pf_int(int *printed_chars, va_list list)
+void pf_int(int *printed_chars, va_list list)
 {
     int nbr = 0;
 
@@ -15,5 +15,4 @@ int pf_int(int *printed_chars, va_list list)
     if (nbr < 0)
         my_put_char(printed_chars, '-');
     my_put_absolute_value(printed_chars, nbr);
-    return (0);
 }

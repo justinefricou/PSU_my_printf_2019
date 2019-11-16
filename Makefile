@@ -10,13 +10,13 @@ NAME_TESTS	=	tests_my_printf
 
 SRC	=	lib/my/my_printf.c 	\
 		lib/my/display_result.c 	\
-		lib/my/my_strlen.c 	\
 		lib/my/pf_char.c 	\
 		lib/my/pf_str.c 	\
 		lib/my/pf_int.c 	\
 		lib/my/pf_u.c 	\
 		lib/my/pf_n.c 	\
 		lib/my/pf_b.c 	\
+		lib/my/pf_o.c 	\
 		lib/my/tools.c
 
 #####################################################
@@ -25,13 +25,13 @@ NAME_PROGR = progr
 
 SRC_PROGR = lib/my/my_printf.c 	\
 			lib/my/display_result.c 	\
-			lib/my/my_strlen.c 	\
 			lib/my/pf_char.c 	\
 			lib/my/pf_str.c 	\
 			lib/my/pf_int.c 	\
 			lib/my/pf_u.c 	\
 			lib/my/pf_n.c 	\
 			lib/my/pf_b.c 	\
+			lib/my/pf_o.c 	\
 			lib/my/tools.c 	\
 			main.c
 

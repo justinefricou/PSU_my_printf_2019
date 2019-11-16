@@ -18,19 +18,21 @@ specifier *get_specifiers(const char *format);
 int detect_specifier(const char **format);
 char *get_flags(const char **format);
 
-int display_result(const char *str, specifier *spec, va_list list, int *nbr_c);
-int display_arg(specifier *specifiers, va_list list, int *printed_chars);
+void display_result(const char *str, specifier *spec, va_list list, int *nbr_c);
+void display_arg(specifier *specifiers, va_list list, int *printed_chars);
 
 int my_strlen(const char *str);
-int my_put_char(int *printed_chars, char c);
-int my_put_absolute_value(int *printed_chars, int nbr);
+void my_put_char(int *printed_chars, char c);
+void my_put_absolute_value(int *printed_chars, int nbr);
 long long x_to_the_power_of_n(int x, int n);
+int get_digit_in_base(int nbr, int base, int exponent);
 
-int pf_char(int *printed_chars, va_list list);
-int pf_str(int *printed_chars, va_list list);
-int pf_int(int *printed_chars, va_list list);
-int pf_u(int *printed_chars, va_list list);
-int pf_n(int *printed_chars, va_list list);
-int pf_b(int *printed_chars, va_list list);
+void pf_char(int *printed_chars, va_list list);
+void pf_str(int *printed_chars, va_list list);
+void pf_int(int *printed_chars, va_list list);
+void pf_u(int *printed_chars, va_list list);
+void pf_n(int *printed_chars, va_list list);
+void pf_b(int *printed_chars, va_list list);
+void pf_o(int *printed_chars, va_list list);
 
 #endif
