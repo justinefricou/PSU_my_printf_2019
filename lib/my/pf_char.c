@@ -1,13 +1,13 @@
 /*
 ** EPITECH PROJECT, 2019
-** my_putchar
+** pf_char.c
 ** File description:
-** my_putchar
+** my_printf : pf_char
 */
 
 #include "../../include/my.h"
 
-int my_putchar(int *printed_chars, va_list list)
+int pf_char(int *printed_chars, va_list list)
 {
     char character;
 

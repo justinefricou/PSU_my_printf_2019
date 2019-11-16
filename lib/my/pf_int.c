@@ -1,13 +1,13 @@
 /*
 ** EPITECH PROJECT, 2019
-** my_put_nbr
+** pf_int.c
 ** File description:
-** my_put_nbr
+** my_printf : pf_int
 */
 
 #include "../../include/my.h"
 
-int my_putint(int *printed_chars, va_list list)
+int pf_int(int *printed_chars, va_list list)
 {
     int nbr = 0;
 

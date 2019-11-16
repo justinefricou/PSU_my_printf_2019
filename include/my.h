@@ -25,8 +25,9 @@ int my_strlen(const char *str);
 int my_put_char(int *printed_chars, char c);
 int my_put_nbr(int *printed_chars, int nbr);
 
-int my_putchar(int *printed_chars, va_list list);
-int my_putstr(int *printed_chars, va_list list);
-int my_putint(int *printed_chars, va_list list);
+int pf_char(int *printed_chars, va_list list);
+int pf_str(int *printed_chars, va_list list);
+int pf_int(int *printed_chars, va_list list);
+int pf_unsigned_int(int *printed_chars, va_list list);
 
 #endif

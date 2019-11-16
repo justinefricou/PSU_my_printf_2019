@@ -1,13 +1,13 @@
 /*
 ** EPITECH PROJECT, 2019
-** my_putstr
+** pf_str.c
 ** File description:
-** Displaying the characters of a string (address in parameters)
+** my_printf : pf_str
 */
 
 #include "../../include/my.h"
 
-int my_putstr(int *printed_chars, va_list list)
+int pf_str(int *printed_chars, va_list list)
 {
     char *str = NULL;
 
