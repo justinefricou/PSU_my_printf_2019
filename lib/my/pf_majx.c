@@ -25,7 +25,7 @@ void pf_x(int *printed_chars, va_list list)
     }
 }
 
-void pf_X(int *printed_chars, va_list list)
+void pf_majx(int *printed_chars, va_list list)
 {
     unsigned int nbr = 0;
     int digit = 0;

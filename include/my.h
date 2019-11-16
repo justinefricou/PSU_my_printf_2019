@@ -35,7 +35,7 @@ void pf_n(int *printed_chars, va_list list);
 void pf_b(int *printed_chars, va_list list);
 void pf_o(int *printed_chars, va_list list);
 void pf_x(int *printed_chars, va_list list);
-void pf_X(int *printed_chars, va_list list);
+void pf_maj_x(int *printed_chars, va_list list);
 void pf_p(int *printed_chars, va_list list);
 
 #endif
