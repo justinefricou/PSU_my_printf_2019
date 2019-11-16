@@ -57,6 +57,5 @@ char *get_flags(const char **format)
 {
     char *flags = NULL;
 
-    //!
     return (flags);
 }
