@@ -28,6 +28,7 @@ int my_put_absolute_value(int *printed_chars, int nbr);
 int pf_char(int *printed_chars, va_list list);
 int pf_str(int *printed_chars, va_list list);
 int pf_int(int *printed_chars, va_list list);
-int pf_unsigned_int(int *printed_chars, va_list list);
+int pf_u(int *printed_chars, va_list list);
+int pf_n(int *printed_chars, va_list list);
 
 #endif

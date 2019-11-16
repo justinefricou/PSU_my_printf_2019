@@ -7,7 +7,7 @@
 
 #include "../../include/my.h"
 
-int pf_unsigned_int(int *printed_chars, va_list list)
+int pf_u(int *printed_chars, va_list list)
 {
     int nbr = 0;
 

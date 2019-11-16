@@ -14,7 +14,8 @@ SRC	=	lib/my/my_printf.c 	\
 		lib/my/pf_char.c 	\
 		lib/my/pf_str.c 	\
 		lib/my/pf_int.c 	\
-		lib/my/pf_unsigned_int.c 	\
+		lib/my/pf_u.c 	\
+		lib/my/pf_n.c 	\
 		lib/my/tools.c
 
 #####################################################
@@ -27,7 +28,8 @@ SRC_PROGR = lib/my/my_printf.c 	\
 			lib/my/pf_char.c 	\
 			lib/my/pf_str.c 	\
 			lib/my/pf_int.c 	\
-			lib/my/pf_unsigned_int.c 	\
+			lib/my/pf_u.c 	\
+			lib/my/pf_n.c 	\
 			lib/my/tools.c 	\
 			main.c
 
