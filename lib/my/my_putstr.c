@@ -7,13 +7,14 @@
 
 #include "../../include/my.h"
 
-int my_putstr(char *str)
+int my_putstr(int *printed_chars, va_list list)
 {
-    int i = 0;
+    char *str = NULL;
 
-    while (str[i] != '\0') {
-        my_putchar(str[i]);
-        i++;
+    str = va_arg(list, char *);
+    for (int i = 0; str[i] != 0; i++){
+        write(1, &(str[i]), 1);
+        (*printed_chars++);
     }
     return (0);
 }

@@ -6,13 +6,6 @@
 */
 
 #include "../../include/my.h"
-#include "../../include/specifier.h"
-
-specifier *get_specifiers(const char *format);
-int find_specifier(const char **format);
-char *get_flags(const char **format);
-
-void display_result(const char *str, specifier *spec, va_list list, int *nbr_c);
 
 int my_printf(const char *format, ...)
 {
@@ -22,7 +15,11 @@ int my_printf(const char *format, ...)
 
     va_start(list, format);
     specifiers = get_specifiers(format);
-    display_result(format, specifiers, list, &printed_chars);
+    if (display_result(format, specifiers, list, &printed_chars) == 84) {
+        va_end(list);
+        free(specifiers);
+        return (84);
+    }
     va_end(list);
     free(specifiers);
     return (printed_chars);
@@ -37,7 +34,7 @@ specifier *get_specifiers(const char *format)
     format_length = my_strlen(format);
     specifiers = malloc(sizeof(specifier) * (format_length) / 2 + 1);
     for ( ; *(format + 1) != 0; format++) {
-        if (find_specifier(&format)) {
+        if (detect_specifier(&format)) {
             (specifiers[nbr_of_specifiers]).type = *format;
             (specifiers[nbr_of_specifiers]).flags = get_flags(&format);
             nbr_of_specifiers++;
@@ -48,12 +45,16 @@ specifier *get_specifiers(const char *format)
     return (specifiers);
 }
 
-int find_specifier(const char **format)
+int detect_specifier(const char **format)
 {
     int nbr_of_percents = 0;
+    char *handled_specifiers = "csid";
 
     for ( ; **format != 0 && **format == '%'; (*format)++, nbr_of_percents++);
-    return (nbr_of_percents % 2);
+    for ( ; *handled_specifiers != 0; handled_specifiers++)
+        if (**format == *handled_specifiers)
+            return (nbr_of_percents % 2);
+    return (0);
 }
 
 char *get_flags(const char **format)

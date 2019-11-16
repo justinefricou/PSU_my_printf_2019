@@ -7,7 +7,12 @@
 
 #include "../../include/my.h"
 
-void my_putchar(char c)
+int my_putchar(int *printed_chars, va_list list)
 {
-    write(1, &c, 1);
+    char character;
+
+    character = va_arg(list, int);
+    write(1, &character, 1);
+    (*printed_chars)++;
+    return (0);
 }

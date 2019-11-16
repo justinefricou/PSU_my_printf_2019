@@ -11,11 +11,22 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <unistd.h>
+#include "specifier.h"
 
 int my_printf(const char *format, ...);
+specifier *get_specifiers(const char *format);
+int detect_specifier(const char **format);
+char *get_flags(const char **format);
+
+int display_result(const char *str, specifier *spec, va_list list, int *nbr_c);
+int display_arg(specifier *specifiers, va_list list, int *printed_chars);
+
 int my_strlen(const char *str);
-void my_putchar(char c);
-int my_putstr(char *str);
-int my_put_nbr(int nbr);
+int my_put_char(int *printed_chars, char c);
+int my_put_nbr(int *printed_chars, int nbr);
+
+int my_putchar(int *printed_chars, va_list list);
+int my_putstr(int *printed_chars, va_list list);
+int my_putint(int *printed_chars, va_list list);
 
 #endif

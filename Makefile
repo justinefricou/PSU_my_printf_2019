@@ -13,7 +13,8 @@ SRC	=	lib/my/my_printf.c 	\
 		lib/my/my_strlen.c 	\
 		lib/my/my_putchar.c 	\
 		lib/my/my_putstr.c 	\
-		lib/my/my_put_nbr.c
+		lib/my/my_putint.c 	\
+		lib/my/tools.c
 
 #####################################################
 
@@ -24,7 +25,8 @@ SRC_PROGR = lib/my/my_printf.c 	\
 			lib/my/my_strlen.c 	\
 			lib/my/my_putchar.c 	\
 			lib/my/my_putstr.c 	\
-			lib/my/my_put_nbr.c 	\
+			lib/my/my_putint.c 	\
+			lib/my/tools.c 	\
 			main.c
 
 OBJ_PROGR	=	$(SRC_PROGR:.c=.o)
