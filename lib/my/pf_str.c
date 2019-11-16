@@ -14,7 +14,7 @@ int pf_str(int *printed_chars, va_list list)
     str = va_arg(list, char *);
     for (int i = 0; str[i] != 0; i++){
         write(1, &(str[i]), 1);
-        (*printed_chars++);
+        (*printed_chars)++;
     }
     return (0);
 }

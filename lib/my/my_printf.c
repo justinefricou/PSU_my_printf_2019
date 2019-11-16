@@ -48,7 +48,7 @@ specifier *get_specifiers(const char *format)
 int detect_specifier(const char **format)
 {
     int nbr_of_percents = 0;
-    char *handled_specifiers = "csidun";
+    char *handled_specifiers = "csidunb";
 
     for ( ; **format != 0 && **format == '%'; (*format)++, nbr_of_percents++);
     for ( ; *handled_specifiers != 0; handled_specifiers++)

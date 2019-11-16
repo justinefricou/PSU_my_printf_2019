@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2019
 ** tools.c
 ** File description:
-** my_printf : functions to display things
+** my_printf : functions to display or calculate things
 */
 
 #include "../../include/my.h"

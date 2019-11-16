@@ -24,11 +24,13 @@ int display_arg(specifier *specifiers, va_list list, int *printed_chars);
 int my_strlen(const char *str);
 int my_put_char(int *printed_chars, char c);
 int my_put_absolute_value(int *printed_chars, int nbr);
+long long x_to_the_power_of_n(int x, int n);
 
 int pf_char(int *printed_chars, va_list list);
 int pf_str(int *printed_chars, va_list list);
 int pf_int(int *printed_chars, va_list list);
 int pf_u(int *printed_chars, va_list list);
 int pf_n(int *printed_chars, va_list list);
+int pf_b(int *printed_chars, va_list list);
 
 #endif
