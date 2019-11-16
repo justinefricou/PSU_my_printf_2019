@@ -12,6 +12,8 @@ int pf_unsigned_int(int *printed_chars, va_list list)
     int nbr = 0;
 
     nbr = va_arg(list, unsigned int);
-    my_put_nbr(printed_chars, nbr);
+    if (nbr < 0)
+        return (84);
+    my_put_absolute_value(printed_chars, nbr);
     return (0);
 }
