@@ -59,7 +59,9 @@ void get_flags(specifier specif, const char **format)
     int nb_flags = 0;
 
     specif.flags = malloc(sizeof(char) * 4);
-    for ( ; **format != 0 && !is_specifier(**format); nb_flags++, (*format)++)
-        (specif.flags)[nb_flags] = **format;
+    for ( ; **format != 0 && !is_specifier(**format); nb_flags++, (*format)++) {
+        if (is_flag(**format))
+            (specif.flags)[nb_flags] = **format;
+    }
     (specif.flags)[nb_flags] = 0;
 }
