@@ -9,17 +9,17 @@
 
 void display_result(const char *str, specifier *spec, va_list list, int *nbr_c)
 {
-    for (int i = 0; str[i] != 0; i++) {
-        if (str[i] == '%' && str[i + 1] == (*spec).type) {
+    for ( ; *str != 0; str++) {
+        if (*str == '%' && *(str + 1) == (*spec).type) {
             display_arg(spec, list, nbr_c);
             spec++;
-            i++;
-        } else if (str[i] == '%' && str[i + 1] == '%') {
-            write(1, &(str[i]), 1);
-            i++;
+            str++;
+        } else if (*str == '%' && *(str + 1) == '%') {
+            write(1, str, 1);
+            str++;
             (*nbr_c)++;
         } else {
-            write(1, &(str[i]), 1);
+            write(1, str, 1);
             (*nbr_c)++;
         }
     }
