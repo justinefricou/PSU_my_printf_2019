@@ -25,19 +25,19 @@ specifier *get_specifiers(const char *format)
 {
     specifier *specifiers = NULL;
     int format_length = 0;
-    int nbr_of_specifiers = 0;
+    int nb_spe = 0;
 
     format_length = my_strlen(format);
     specifiers = malloc(sizeof(specifier) * (format_length) / 2 + 1);
     for ( ; *(format + 1) != 0; format++) {
         if (detect_specifier(&format)) {
-            (specifiers[nbr_of_specifiers]).type = *format;
-            (specifiers[nbr_of_specifiers]).flags = get_flags(&format);
-            nbr_of_specifiers++;
+            get_flags(specifiers[nb_spe], &format);
+            (specifiers[nb_spe]).type = *format;
+            nb_spe++;
         }
     }
-    (specifiers[nbr_of_specifiers]).type = '\0';
-    (specifiers[nbr_of_specifiers]).flags = NULL;
+    (specifiers[nb_spe]).type = 0;
+    (specifiers[nb_spe]).flags = NULL;
     return (specifiers);
 }
 
@@ -47,15 +47,19 @@ int detect_specifier(const char **format)
     char *handled_specifiers = "csidunboxXpS";
 
     for ( ; **format != 0 && **format == '%'; (*format)++, nbr_of_percents++);
-    for ( ; *handled_specifiers != 0; handled_specifiers++)
+    for ( ; *handled_specifiers != 0; handled_specifiers++) {
         if (**format == *handled_specifiers)
             return (nbr_of_percents % 2);
+    }
     return (0);
 }
 
-char *get_flags(const char **format)
+void get_flags(specifier specif, const char **format)
 {
-    char *flags = NULL;
+    int nb_flags = 0;
 
-    return (flags);
+    specif.flags = malloc(sizeof(char) * 4);
+    for ( ; **format != 0 && !is_specifier(**format); nb_flags++, (*format)++)
+        (specif.flags)[nb_flags] = **format;
+    (specif.flags)[nb_flags] = 0;
 }

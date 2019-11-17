@@ -16,7 +16,7 @@
 int my_printf(const char *format, ...);
 specifier *get_specifiers(const char *format);
 int detect_specifier(const char **format);
-char *get_flags(const char **format);
+void get_flags(specifier specif, const char **format);
 
 void display_result(const char *str, specifier *spec, va_list list, int *nbr_c);
 void display_arg(specifier *specifiers, va_list list, int *printed_chars);
@@ -24,6 +24,9 @@ void display_arg(specifier *specifiers, va_list list, int *printed_chars);
 int my_strlen(const char *str);
 void my_put_char(int *printed_chars, char c);
 void my_put_absolute_value(int *printed_chars, int nbr);
+int is_specifier(char c);
+int is_flag(char c);
+
 long long x_to_the_power_of_n(int x, int n);
 int get_digit_in_base(long long nbr, int base, int exponent);
 void display_nbr_octal_base(int *printed_chars, char nbr);

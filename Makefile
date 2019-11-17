@@ -20,7 +20,8 @@ SRC	=	lib/my/my_printf.c 	\
 		lib/my/pf_xmajx.c 	\
 		lib/my/pf_p.c 	\
 		lib/my/pf_S.c 	\
-		lib/my/tools.c
+		lib/my/tools.c 	\
+		lib/my/bases_tools.c
 
 SRC_TESTS	=
 

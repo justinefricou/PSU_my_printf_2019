@@ -30,21 +30,24 @@ void my_put_absolute_value(int *printed_chars, int nbr)
     my_put_char(printed_chars, nbr % 10 + 48);
 }
 
-long long x_to_the_power_of_n(int x, int n)
+int is_specifier(char c)
 {
-    long long result = 1;
-    for ( ; n > 0; n--)
-        result *= x;
-    return (result);
+    char *handled_specifiers = "csidunboxXpS";
+
+    for ( ; *handled_specifiers != 0; handled_specifiers++) {
+        if (*handled_specifiers == c)
+            return (1);
+    }
+    return (0);
 }
 
-int get_digit_in_base(long long nbr, int base, int exponent)
+int is_flag(char c)
 {
-    int digit = base - 1;
+    char *handled_flags = "+ 0";
 
-    for ( ; digit > 0; digit--) {
-        if (nbr >= digit * x_to_the_power_of_n(base, exponent))
-            break;
+    for ( ; *handled_flags != 0; handled_flags++) {
+        if (*handled_flags == c)
+            return (1);
     }
-    return (digit);
+    return (0);
 }
