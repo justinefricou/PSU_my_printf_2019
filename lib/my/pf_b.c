@@ -9,22 +9,6 @@
 
 void pf_b(int *printed_chars, va_list list, char *flags)
 {
-    /*long long nbr;
-    int digit = 0;
-    int significant_digit = 0;
-
-    nbr = va_arg(list, long long);
-    for (int exponent = 63; exponent >= 0; exponent--) {
-        digit = ((nbr - x_to_the_power_of_n(2, exponent)) >= 0);
-        if (digit != 0 || significant_digit) {
-            my_put_char(printed_chars, digit + 48);
-            nbr -= x_to_the_power_of_n(2, exponent);
-        }
-        if (digit == 1)
-            significant_digit = 1;
-    }
-    if (significant_digit == 0)
-        my_put_char(printed_chars, '0');*/
     unsigned long nbr = 0;
     int digit = 0;
     int significant_digit = 0;

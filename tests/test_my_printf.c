@@ -9,7 +9,7 @@
 #include <criterion/redirect.h>
 #include "../include/my.h"
 
-Test(my_printf, single_specifier_case, .init=cr_redirect_stdout)
+Test(my_printf, single_specifier_case, .init = cr_redirect_stdout)
 {
     char str[5];
     str[0] = 'l';
@@ -29,7 +29,7 @@ Test(my_printf, single_specifier_case, .init=cr_redirect_stdout)
     cr_expect_stdout_eq_str("hey-120307891361215e1ADAl\\11\\242\\0");
 }
 
-Test(my_printf, binary, .init=cr_redirect_stdout)
+Test(my_printf, binary, .init = cr_redirect_stdout)
 {
     cr_expect_eq(my_printf("%b", 0), 1);
     cr_expect_eq(my_printf("%b", 1), 1);
