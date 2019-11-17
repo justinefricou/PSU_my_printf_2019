@@ -7,7 +7,7 @@
 
 #include "../../include/my.h"
 
-void pf_m(int *printed_chars, va_list list)
+void pf_m(int *printed_chars, va_list list, char *flags)
 {
     char buffer[2] = {0};
     int size_read = 1;

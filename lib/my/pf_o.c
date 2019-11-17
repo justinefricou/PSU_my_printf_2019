@@ -7,7 +7,7 @@
 
 #include "../../include/my.h"
 
-void pf_o(int *printed_chars, va_list list)
+void pf_o(int *printed_chars, va_list list, char *flags)
 {
     unsigned int nbr = 0;
     int digit = 0;

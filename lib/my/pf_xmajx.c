@@ -7,7 +7,7 @@
 
 #include "../../include/my.h"
 
-void pf_x(int *printed_chars, va_list list)
+void pf_x(int *printed_chars, va_list list, char *flags)
 {
     unsigned int nbr = 0;
     int digit = 0;
@@ -27,7 +27,7 @@ void pf_x(int *printed_chars, va_list list)
         my_put_char(printed_chars, '0');
 }
 
-void pf_majx(int *printed_chars, va_list list)
+void pf_majx(int *printed_chars, va_list list, char *flags)
 {
     unsigned int nbr = 0;
     int digit = 0;
