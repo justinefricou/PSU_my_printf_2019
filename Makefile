@@ -19,11 +19,11 @@ SRC	=	lib/my/my_printf.c 	\
 		lib/my/pf_o.c 	\
 		lib/my/pf_xmajx.c 	\
 		lib/my/pf_p.c 	\
-		lib/my/pf_S.c 	\
+		lib/my/pf_majs.c 	\
 		lib/my/tools.c 	\
 		lib/my/bases_tools.c
 
-SRC_TESTS	=
+SRC_TESTS	= 	tests/test_my_printf.c
 
 OBJ	=	$(SRC:.c=.o)
 OBJ_TESTS	=	$(SRC_TESTS:.c=.o)
