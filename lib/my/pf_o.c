@@ -22,4 +22,6 @@ void pf_o(int *printed_chars, va_list list)
         if (digit > 0)
             significant_digit = 1;
     }
+    if (significant_digit == 0)
+        my_put_char(printed_chars, '0');
 }

@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2019
-** pf_x.c
+** pf_xmajx.c
 ** File description:
-** my_printf : pf_x
+** my_printf : pf_x and pf_majx
 */
 
 #include "../../include/my.h"
@@ -23,6 +23,8 @@ void pf_x(int *printed_chars, va_list list)
         if (digit > 0)
             significant_digit = 1;
     }
+    if (significant_digit == 0)
+        my_put_char(printed_chars, '0');
 }
 
 void pf_majx(int *printed_chars, va_list list)
@@ -41,4 +43,6 @@ void pf_majx(int *printed_chars, va_list list)
         if (digit > 0)
             significant_digit = 1;
     }
+    if (significant_digit == 0)
+        my_put_char(printed_chars, '0');
 }
